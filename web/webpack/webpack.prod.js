@@ -4,12 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'index.bundle.js'
-  },
-  devServer: {
-    port: 300,
-    watchContentBase: true
+    path: path.join(__dirname, '../dist'),
+    filename: 'index.js'
   },
   module: {
     rules: [
@@ -21,24 +17,44 @@ module.exports = {
           options: {
             transpileOnly: true
           }
-        },
+        }
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
-        },
+        }
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'css',
+              name: 'app.css'
+            }
+          },
+          "style-loader",
+          "css-loader",
+        ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      minify: {
+        minifyCSS: true,
+        minifyJS: true,
+        minifyURLs: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        collapseWhitespace: true,
+        removeEmptyAttributes: true, 
+      },
       inject: true
     })
   ],
