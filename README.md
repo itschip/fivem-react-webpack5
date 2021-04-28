@@ -10,6 +10,10 @@ First you need to change the resource name in the `NuiProvider`.
 </NuiProvider>
 ```
 
+Run `yarn serve` while developing in the browser.
+
+Run `yarn build` to build the React project.
+
 Now that you got this going, you're basiclally ready to go.
 
 
