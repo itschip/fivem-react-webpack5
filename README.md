@@ -18,7 +18,7 @@ Let's cover the basics!
 
 To get data from the client, we need to take use of the `useNuiEvent` hook we get from `fivem-nui-react-lib`.
 
-```js
+```ts
 const [visibility, setVisibility] = useState<boolean>(false);
 
 useNuiEvent('RESOURCE', 'setVisibility', setVisibility);
