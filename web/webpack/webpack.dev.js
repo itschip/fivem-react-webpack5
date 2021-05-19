@@ -8,7 +8,7 @@ module.exports = {
     filename: 'index.js'
   },
   devServer: {
-    port: 300,
+    port: 3000,
     watchContentBase: true
   },
   module: {
