@@ -15,3 +15,16 @@ export function App() {
     </>
   )
 }
+
+
+setTimeout(() => {
+  window.dispatchEvent(
+    new MessageEvent('message', {
+      data: {
+        app: 'RESOURCE',
+        method: 'setVisibility',
+        data: true
+      }
+    })
+  )
+}, 0)
