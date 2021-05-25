@@ -8,5 +8,5 @@ ui_page "web/dist/index.html"
 files {
   "web/dist/index.html",
   "web/dist/index.js"
-  -- incldue css file aswell.
+  -- include css file aswell.
 }
