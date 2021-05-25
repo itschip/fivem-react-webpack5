@@ -7,5 +7,5 @@ ui_page "web/dist/index.html"
 
 files {
   "web/dist/index.html",
-  "index.bundle.js"
+  "web/dist/index.js"
 }
