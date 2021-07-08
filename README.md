@@ -1,5 +1,10 @@
 # fivem-react-webpack5
 
+# Disclaimer:
+Use this: https://github.com/project-error/fivem-react-boilerplate-lua 
+
+Consider this repo archvied and no longer maintained.
+
 ## How to use it
 First you need to change the resource name in the `NuiProvider`.
 
